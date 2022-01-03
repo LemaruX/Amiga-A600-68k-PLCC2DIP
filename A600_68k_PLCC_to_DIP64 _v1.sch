@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Amiga A600 68k PLCC2DIP"
-Date "29/07/20"
-Rev "1"
+Title "Amiga A600 68k PLCC2DIP v1"
+Date "2022-01-03"
+Rev "B"
 Comp ""
 Comment1 "Based on work by Kludge"
 Comment2 "Design by Lemaru"
@@ -25,7 +25,7 @@ F 3 "DOCUMENTATION" H 3150 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MC68000_DIP64_SOCKET:68000_SOCKET U2
+L 68000_DIP_SOCKET:68000_SOCKET U2
 U 1 1 5F191C24
 P 8100 3600
 F 0 "U2" H 8000 3650 50  0000 C CNN
@@ -63,7 +63,7 @@ U 1 1 5F197575
 P 2650 5950
 F 0 "R1" H 2720 5996 50  0000 L CNN
 F 1 "220R" H 2720 5905 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2580 5950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2580 5950 50  0001 C CNN
 F 3 "~" H 2650 5950 50  0001 C CNN
 	1    2650 5950
 	1    0    0    -1  
@@ -74,7 +74,7 @@ U 1 1 5F197D12
 P 6500 1750
 F 0 "R2" H 6570 1796 50  0000 L CNN
 F 1 "1k" H 6570 1705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 1750 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 6430 1750 50  0001 C CNN
 F 3 "~" H 6500 1750 50  0001 C CNN
 	1    6500 1750
 	1    0    0    -1  
@@ -115,7 +115,6 @@ Wire Wire Line
 Wire Wire Line
 	3050 6150 2950 6150
 Connection ~ 2950 6150
-NoConn ~ 3150 5200
 NoConn ~ 3650 5200
 $Comp
 L power:GND #PWR0104
@@ -168,7 +167,6 @@ Wire Wire Line
 Wire Wire Line
 	8200 950  8150 950 
 Connection ~ 8150 950 
-NoConn ~ 4750 4300
 Wire Wire Line
 	1550 4300 1000 4300
 Wire Wire Line
@@ -742,8 +740,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 5200 2350 5500
 Wire Wire Line
-	2450 5200 2450 5500
-Wire Wire Line
 	2550 5200 2550 5500
 Wire Wire Line
 	2750 5650 2000 5650
@@ -769,21 +765,11 @@ Wire Wire Line
 Wire Wire Line
 	3350 5200 3350 5500
 Wire Wire Line
-	3450 5200 3450 5500
-Wire Wire Line
-	3550 5200 3550 5500
-Wire Wire Line
 	3750 5200 3750 5500
 Wire Wire Line
 	3850 5200 3850 5500
 Wire Wire Line
 	3950 5200 3950 5500
-Wire Wire Line
-	4750 4400 5050 4400
-Wire Wire Line
-	4750 4500 5050 4500
-Wire Wire Line
-	4750 4600 5050 4600
 Wire Wire Line
 	4750 4700 5050 4700
 Text Label 1250 4400 0    50   ~ 0
@@ -811,18 +797,6 @@ Wire Wire Line
 Wire Wire Line
 	7100 4200 6800 4200
 Wire Wire Line
-	7100 3200 6800 3200
-Wire Wire Line
-	7100 3100 6800 3100
-Wire Wire Line
-	7100 2800 6800 2800
-Wire Wire Line
-	7100 2700 6800 2700
-Wire Wire Line
-	7100 2600 6800 2600
-Wire Wire Line
-	7100 2200 6800 2200
-Wire Wire Line
 	7100 2100 6800 2100
 Wire Wire Line
 	7100 1900 6800 1900
@@ -845,8 +819,6 @@ Wire Wire Line
 	6500 1600 6500 1350
 Text Label 2350 5500 1    50   ~ 0
 ~dtack
-Text Label 2450 5500 1    50   ~ 0
-~bg
 Text Label 2550 5500 1    50   ~ 0
 ~bgack
 Text Label 2850 5500 1    50   ~ 0
@@ -855,22 +827,12 @@ Text Label 3250 5500 1    50   ~ 0
 ~halt
 Text Label 3350 5500 1    50   ~ 0
 ~reset
-Text Label 3450 5500 1    50   ~ 0
-~vma
-Text Label 3550 5500 1    50   ~ 0
-e
 Text Label 3750 5500 1    50   ~ 0
 ~berr
 Text Label 3850 5500 1    50   ~ 0
 ~ipl2
 Text Label 3950 5500 1    50   ~ 0
 ~ipl1
-Text Label 4900 4400 0    50   ~ 0
-fc0
-Text Label 4900 4500 0    50   ~ 0
-fc1
-Text Label 4900 4600 0    50   ~ 0
-fc2
 Text Label 4900 4700 0    50   ~ 0
 ~ipl0
 Text Label 6800 1400 0    50   ~ 0
@@ -883,18 +845,6 @@ Text Label 6800 1900 0    50   ~ 0
 ~ipl2
 Text Label 6800 2100 0    50   ~ 0
 ~bgack
-Text Label 6800 2200 0    50   ~ 0
-~bg
-Text Label 6800 2600 0    50   ~ 0
-fc0
-Text Label 6800 2700 0    50   ~ 0
-fc1
-Text Label 6800 2800 0    50   ~ 0
-fc2
-Text Label 6800 3100 0    50   ~ 0
-~vma
-Text Label 6800 3200 0    50   ~ 0
-e
 Text Label 6800 4200 0    50   ~ 0
 ~berr
 Text Label 6800 4400 0    50   ~ 0
@@ -914,60 +864,262 @@ r~w
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5F16FEA5
-P 5000 6000
-F 0 "H1" H 4950 6200 50  0000 L CNN
-F 1 "MountingHole_Pad" V 4850 5550 50  0000 L CNN
-F 2 "A600 68k PLCC to DIP64:MountingHole_2mm_Pad_Via" H 5000 6000 50  0001 C CNN
-F 3 "~" H 5000 6000 50  0001 C CNN
-	1    5000 6000
+P 5700 6700
+F 0 "H1" H 5650 6900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 5550 6250 50  0000 L CNN
+F 2 "A600 68k PLCC to DIP64:MountingHole_2mm_Pad_Via" H 5700 6700 50  0001 C CNN
+F 3 "~" H 5700 6700 50  0001 C CNN
+	1    5700 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H2
 U 1 1 5F17185B
-P 5300 6000
-F 0 "H2" H 5250 6200 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5150 5550 50  0000 L CNN
-F 2 "A600 68k PLCC to DIP64:MountingHole_2mm_Pad_Via" H 5300 6000 50  0001 C CNN
-F 3 "~" H 5300 6000 50  0001 C CNN
-	1    5300 6000
+P 6000 6700
+F 0 "H2" H 5950 6900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 5850 6250 50  0000 L CNN
+F 2 "A600 68k PLCC to DIP64:MountingHole_2mm_Pad_Via" H 6000 6700 50  0001 C CNN
+F 3 "~" H 6000 6700 50  0001 C CNN
+	1    6000 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H3
 U 1 1 5F172933
-P 5600 6000
-F 0 "H3" H 5550 6200 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5450 5550 50  0000 L CNN
-F 2 "A600 68k PLCC to DIP64:MountingHole_2mm_Pad_Via" H 5600 6000 50  0001 C CNN
-F 3 "~" H 5600 6000 50  0001 C CNN
-	1    5600 6000
+P 6300 6700
+F 0 "H3" H 6250 6900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 6150 6250 50  0000 L CNN
+F 2 "A600 68k PLCC to DIP64:MountingHole_2mm_Pad_Via" H 6300 6700 50  0001 C CNN
+F 3 "~" H 6300 6700 50  0001 C CNN
+	1    6300 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5F173686
-P 5300 6600
-F 0 "#PWR01" H 5300 6350 50  0001 C CNN
-F 1 "GND" H 5305 6427 50  0000 C CNN
-F 2 "" H 5300 6600 50  0001 C CNN
-F 3 "" H 5300 6600 50  0001 C CNN
-	1    5300 6600
+P 6000 7300
+F 0 "#PWR01" H 6000 7050 50  0001 C CNN
+F 1 "GND" H 6005 7127 50  0000 C CNN
+F 2 "" H 6000 7300 50  0001 C CNN
+F 3 "" H 6000 7300 50  0001 C CNN
+	1    6000 7300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 6100 5000 6500
+	5700 6800 5700 7200
 Wire Wire Line
-	5000 6500 5300 6500
+	5700 7200 6000 7200
 Wire Wire Line
-	5600 6500 5600 6100
+	6300 7200 6300 6800
 Wire Wire Line
-	5300 6100 5300 6500
-Connection ~ 5300 6500
+	6000 6800 6000 7200
+Connection ~ 6000 7200
 Wire Wire Line
-	5300 6500 5600 6500
+	6000 7200 6300 7200
 Wire Wire Line
-	5300 6500 5300 6600
+	6000 7200 6000 7300
+NoConn ~ 4750 4400
+NoConn ~ 4750 4500
+NoConn ~ 4750 4600
+NoConn ~ 3550 5200
+NoConn ~ 3450 5200
+NoConn ~ 2450 5200
+Wire Wire Line
+	3150 5200 3150 5650
+Wire Wire Line
+	3150 5650 2750 5650
+Connection ~ 2750 5650
+Wire Wire Line
+	3150 5650 5200 5650
+Wire Wire Line
+	5200 5650 5200 4300
+Wire Wire Line
+	5200 4300 4750 4300
+Connection ~ 3150 5650
+NoConn ~ 7100 2200
+NoConn ~ 7100 2600
+NoConn ~ 7100 2700
+NoConn ~ 7100 2800
+NoConn ~ 7100 3100
+NoConn ~ 7100 3200
+$Comp
+L Device:C C1
+U 1 1 619387F0
+P 800 7050
+F 0 "C1" H 915 7096 50  0000 L CNN
+F 1 "100nf" H 915 7005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 838 6900 50  0001 C CNN
+F 3 "~" H 800 7050 50  0001 C CNN
+	1    800  7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6193953A
+P 1250 7050
+F 0 "C2" H 1365 7096 50  0000 L CNN
+F 1 "100nf" H 1365 7005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1288 6900 50  0001 C CNN
+F 3 "~" H 1250 7050 50  0001 C CNN
+	1    1250 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 6193A469
+P 1700 7050
+F 0 "C3" H 1815 7096 50  0000 L CNN
+F 1 "100nf" H 1815 7005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1738 6900 50  0001 C CNN
+F 3 "~" H 1700 7050 50  0001 C CNN
+	1    1700 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 6193AA8D
+P 2150 7050
+F 0 "C4" H 2265 7096 50  0000 L CNN
+F 1 "100nf" H 2265 7005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2188 6900 50  0001 C CNN
+F 3 "~" H 2150 7050 50  0001 C CNN
+	1    2150 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 6900 2150 6800
+Wire Wire Line
+	2150 6800 1700 6800
+Wire Wire Line
+	1250 6900 1250 6800
+Connection ~ 1250 6800
+Wire Wire Line
+	1250 6800 800  6800
+Wire Wire Line
+	1700 6900 1700 6800
+Connection ~ 1700 6800
+Wire Wire Line
+	1700 6800 1250 6800
+Wire Wire Line
+	800  7300 1250 7300
+Wire Wire Line
+	2150 7300 2150 7200
+Wire Wire Line
+	1700 7200 1700 7300
+Connection ~ 1700 7300
+Wire Wire Line
+	1700 7300 2150 7300
+Wire Wire Line
+	1250 7200 1250 7300
+Connection ~ 1250 7300
+Wire Wire Line
+	1250 7300 1700 7300
+Wire Wire Line
+	800  7200 800  7300
+Wire Wire Line
+	800  6800 800  6900
+$Comp
+L power:GND #PWR05
+U 1 1 61994418
+P 800 7400
+F 0 "#PWR05" H 800 7150 50  0001 C CNN
+F 1 "GND" H 805 7227 50  0000 C CNN
+F 2 "" H 800 7400 50  0001 C CNN
+F 3 "" H 800 7400 50  0001 C CNN
+	1    800  7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR04
+U 1 1 61994D30
+P 800 6700
+F 0 "#PWR04" H 800 6550 50  0001 C CNN
+F 1 "VCC" H 815 6873 50  0000 C CNN
+F 2 "" H 800 6700 50  0001 C CNN
+F 3 "" H 800 6700 50  0001 C CNN
+	1    800  6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  6800 800  6700
+Connection ~ 800  6800
+Wire Wire Line
+	800  7300 800  7400
+Connection ~ 800  7300
+$Comp
+L 171826-4:171826-4 J1
+U 1 1 61D4BEFC
+P 4550 7000
+F 0 "J1" H 4400 7450 50  0000 L CNN
+F 1 "171826-4" H 4300 7350 50  0000 L CNN
+F 2 "A600 68k PLCC to DIP64:TE_171826-4" H 4550 7000 50  0001 L BNN
+F 3 "" H 4550 7000 50  0001 L BNN
+F 4 "171826-4" H 4550 7000 50  0001 L BNN "MP"
+F 5 "None" H 4550 7000 50  0001 L BNN "PACKAGE"
+F 6 "TE Connectivity" H 4550 7000 50  0001 L BNN "MF"
+F 7 "0.34 USD" H 4550 7000 50  0001 L BNN "PRICE"
+F 8 "Good" H 4550 7000 50  0001 L BNN "AVAILABILITY"
+F 9 "CONN HDR 4POS T/H R/A 2.5MM TIN" H 4550 7000 50  0001 L BNN "DESCRIPTION"
+	1    4550 7000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4150 7100
+$Comp
+L power:VCC #PWR02
+U 1 1 61D59C82
+P 4050 6700
+F 0 "#PWR02" H 4050 6550 50  0001 C CNN
+F 1 "VCC" H 4065 6873 50  0000 C CNN
+F 2 "" H 4050 6700 50  0001 C CNN
+F 3 "" H 4050 6700 50  0001 C CNN
+	1    4050 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 61D5A76E
+P 4050 7300
+F 0 "#PWR03" H 4050 7050 50  0001 C CNN
+F 1 "GND" H 4055 7127 50  0000 C CNN
+F 2 "" H 4050 7300 50  0001 C CNN
+F 3 "" H 4050 7300 50  0001 C CNN
+	1    4050 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 6800 4050 6800
+Wire Wire Line
+	4050 6800 4050 6700
+Wire Wire Line
+	4150 6900 4050 6900
+Wire Wire Line
+	4050 6900 4050 7000
+Wire Wire Line
+	4150 7000 4050 7000
+Connection ~ 4050 7000
+Wire Wire Line
+	4050 7000 4050 7300
+$Comp
+L Device:C C5
+U 1 1 61DC9598
+P 2600 7050
+F 0 "C5" H 2715 7096 50  0000 L CNN
+F 1 "100nf" H 2715 7005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2638 6900 50  0001 C CNN
+F 3 "~" H 2600 7050 50  0001 C CNN
+	1    2600 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 6900 2600 6800
+Wire Wire Line
+	2600 6800 2150 6800
+Connection ~ 2150 6800
+Wire Wire Line
+	2600 7200 2600 7300
+Wire Wire Line
+	2600 7300 2150 7300
+Connection ~ 2150 7300
 Wire Bus Line
 	10450 3900 10450 5400
 Wire Bus Line

@@ -8,12 +8,16 @@
 ## Summary
 This is a basic adaptor that disables the on-board 68000 on an Amiga 600, and provides a 64pin DIP socket to allow you to connect a 64pin CPU or an A500 accelerator card. It is based on an idea by [Kludge](https://gitlab.com/kludge) and a modified version of his [Ice Scraper](https://gitlab.com/kludge/a600-ice-scraper) breakout board. 
 
+**Rev B Update** The board has now been updated to a 4-layer design. It also includes a floppy power connector to provide additional power. DO NOT use this connector for powering any devices, it is ONLY for providing additional power to the adaptor. ONLY apply power from the same power source that is powering the Amiga (E.g. the floppy power connector). DO NOT USE AN EXTERNAL POWER SUPPLY. 
+
 To date it has only been tested successfully with the devices listed below. If anyone tests the adaptor successfully on another device, then please let me know and I can update the list.
 
 - 68010 CPU
 - 68000 CPU
 - Terriblefire TF536 (This requires a specific firmware to work on the A600 which you can find [here](https://www.exxoshost.co.uk/forum/viewtopic.php?f=93&t=3438))
 - Matzes 68EC020TK card (Although this device is reported to work, it is too large to close the A600 case when fitted)
+
+- PiStorm - **NOTE** The PiStorm board has been tested, however the A600 is currently not fully supported with the current Proto3 CPLD firmware. 
 
 **PLEASE NOTE** If using with a Terriblefire 536 in the Amiga 600, you must use a certain revision [firmware](https://www.exxoshost.co.uk/forum/viewtopic.php?f=93&t=3438). Unfortunately due to the size of the TF536, to allow for it to fit inside the A600 and the case to be fully closed, you must solder the 64pin DIP socket (or pin strip) with the upper most row of pins slightly higher than the bottom row. This allows the TF536 to sit at a slight angle and prevents it from hitting the bottom of the keyboard. The top row does not need to be raised by much, I usually solder the socket with the top row of pins flush with the bottom of the PCB, which makes it sit approximately 2mm higher. You can find an example of this below:
 
@@ -33,6 +37,9 @@ Devices that have been tested and do **NOT** work are listed below. Again, pleas
 | U2 |  | DIP64 Socket | |
 | R1 | 220R | 0805 | |
 | R2 | 1k | 0805 | |
+| C1, C2, C3, C4, C5 | 100nf | 0805 | |
+| J1 |  | 171826-4 | TE Connectivity Floppy Power Header |
+
 
 ---
 
@@ -48,16 +55,16 @@ I have included the STL files for the spacers that I use in the STL folder. To p
 
 ## License
 
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License][cc-by-nc-sa].
 
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 ---
 
