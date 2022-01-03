@@ -38,7 +38,7 @@ Devices that have been tested and do **NOT** work are listed below. Again, pleas
 | R1 | 220R | 0805 | |
 | R2 | 1k | 0805 | |
 | C1, C2, C3, C4, C5 | 100nf | 0805 | |
-| J1 |  | 171826-4 | TE Connectivity Floppy Power Header |
+| J1 |  | 171826-4 | TE Connectivity floppy power header |
 
 
 ---
