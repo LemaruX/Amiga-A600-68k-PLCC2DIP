@@ -8,7 +8,7 @@
 ## Summary
 This is a basic adaptor that disables the on-board 68000 on an Amiga 600, and provides a 64pin DIP socket to allow you to connect a 64pin CPU or an A500 accelerator card. It is based on an idea by [Kludge](https://gitlab.com/kludge) and a modified version of his [Ice Scraper](https://gitlab.com/kludge/a600-ice-scraper) breakout board. 
 
-**Rev B Update** The board has now been updated to a 4-layer design. It also includes a floppy power connector to provide additional power. DO NOT use this connector for powering any devices, it is ONLY for providing additional power to the adaptor. ONLY apply power from the same power source that is powering the Amiga (E.g. the floppy power connector). DO NOT USE AN EXTERNAL POWER SUPPLY. 
+**Rev B Update** - The board has now been updated to a 4-layer design. It also includes a floppy power connector to provide additional power. **DO NOT use this connector for powering any devices, it is ONLY for providing additional power to the adaptor. ONLY apply power from the same power source that is powering the Amiga (E.g. the floppy power connector). DO NOT USE AN EXTERNAL POWER SUPPLY.** 
 
 To date it has only been tested successfully with the devices listed below. If anyone tests the adaptor successfully on another device, then please let me know and I can update the list.
 
