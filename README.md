@@ -17,7 +17,7 @@ To date it has only been tested successfully with the devices listed below. If a
 - Terriblefire TF536 (This requires a specific firmware to work on the A600 which you can find [here](https://www.exxoshost.co.uk/forum/viewtopic.php?f=93&t=3438))
 - Matzes 68EC020TK card (Although this device is reported to work, it is too large to close the A600 case when fitted)
 
-- PiStorm - **NOTE** The PiStorm board has been tested, however the A600 is currently not fully supported with the current Proto3 CPLD firmware. 
+- PiStorm - **NOTE** The PiStorm board has been tested, however due to the stacking nature of the adaptor, PiStorm and Pi it is not an ideal fit within the case. You are better off using my PiStorm600 board instead. 
 
 **PLEASE NOTE** If using with a Terriblefire 536 in the Amiga 600, you must use a certain revision [firmware](https://www.exxoshost.co.uk/forum/viewtopic.php?f=93&t=3438). Unfortunately due to the size of the TF536, to allow for it to fit inside the A600 and the case to be fully closed, you must solder the 64pin DIP socket (or pin strip) with the upper most row of pins slightly higher than the bottom row. This allows the TF536 to sit at a slight angle and prevents it from hitting the bottom of the keyboard. The top row does not need to be raised by much, I usually solder the socket with the top row of pins flush with the bottom of the PCB, which makes it sit approximately 2mm higher. You can find an example of this below:
 
